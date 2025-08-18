@@ -1,0 +1,11 @@
+/* TODO: Add your Hero component styles here
+ * Requirements:
+ * - Create a full-width image background
+ */
+
+.placeholder {
+  padding: 2rem;
+  border: 2px dashed #ccc;
+  text-align: center;
+  color: #666;
+}
