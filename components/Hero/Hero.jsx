@@ -7,10 +7,11 @@
 
 import styles from '../../styles/hero.module.css';
 
-export default function Hero() {
+export default function Hero({ src, alt, title, description, placeTitle, placeDescription }) {
 	return (
-		<div className={styles.wrapper}>
-			<div>Hero component not implemented yet. Build me!</div>
-		</div>
+		<>
+			<div>{title}</div>
+			<div>{description}</div>
+		</>
 	);
 }
