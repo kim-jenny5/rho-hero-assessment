@@ -5,7 +5,7 @@
 // - Implement scalable styles
 // - Make it semantic and accessible
 
-import styles from '../../styles/Hero.module.css';
+import styles from '../../styles/hero.module.css';
 
 export default function Hero() {
 	return (

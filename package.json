@@ -1,16 +1,18 @@
 {
-  "name": "hero-assessment",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "prop-types": "^15.8.1"
-  }
+	"name": "hero-assessment",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"clsx": "^2.1.1",
+		"lucide-react": "^0.540.0",
+		"next": "latest",
+		"prop-types": "^15.8.1",
+		"react": "latest",
+		"react-dom": "latest"
+	}
 }
