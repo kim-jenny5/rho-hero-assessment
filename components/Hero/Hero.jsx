@@ -8,9 +8,9 @@
 import styles from './Hero.module.css';
 
 export default function Hero() {
-  return (
-    <div className={styles.placeholder}>
-      <p>Hero component not implemented yet. Build me!</p>
-    </div>
-  );
+	return (
+		<div className={styles.wrapper}>
+			<p>Hero component not implemented yet. Build me!</p>
+		</div>
+	);
 }
