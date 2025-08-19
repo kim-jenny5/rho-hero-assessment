@@ -5,12 +5,12 @@
 // - Implement scalable styles
 // - Make it semantic and accessible
 
-import styles from './Hero.module.css';
+import styles from '../../styles/Hero.module.css';
 
 export default function Hero() {
 	return (
 		<div className={styles.wrapper}>
-			<p>Hero component not implemented yet. Build me!</p>
+			<div>Hero component not implemented yet. Build me!</div>
 		</div>
 	);
 }
