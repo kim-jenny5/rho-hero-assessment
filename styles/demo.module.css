@@ -17,6 +17,11 @@
 	pointer-events: none;
 }
 
+.dark {
+	/* --darken: brightness(0.55) contrast(1.05); */
+	--darken: brightness(0.5) contrast(1.1);
+}
+
 .arrowBtn {
 	position: absolute;
 	top: 50%;

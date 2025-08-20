@@ -23,7 +23,7 @@ export default function Demo() {
 					className={clsx(
 						styles.heroWrapper,
 						idx !== currentSection && styles.hidden,
-						section.theme === 'dark' ? styles.dark : styles.light
+						section.theme === 'dark' && styles.dark
 					)}
 				>
 					<Hero

@@ -15,6 +15,7 @@ export default function Hero({ src, alt, title, description, placeTitle, placeDe
 	return (
 		<>
 			<img src={src} alt={alt} className={styles.bgImg} />
+			{/* <div className={styles.overlay} /> */}
 			<div className={styles.hero}>
 				<section className={clsx(styles.content, sameCell && placementClasses[placeTitle])}>
 					<h1 className={clsx(styles.title, !sameCell && placementClasses[placeTitle])}>{title}</h1>
