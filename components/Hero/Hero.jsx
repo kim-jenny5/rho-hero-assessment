@@ -5,12 +5,13 @@
 // - Implement scalable styles
 // - Make it semantic and accessible
 
-import styles from './Hero.module.css';
+import styles from '../../styles/hero.module.css';
 
-export default function Hero() {
-  return (
-    <div className={styles.placeholder}>
-      <p>Hero component not implemented yet. Build me!</p>
-    </div>
-  );
+export default function Hero({ src, alt, title, description, placeTitle, placeDescription }) {
+	return (
+		<>
+			<div>{title}</div>
+			<div>{description}</div>
+		</>
+	);
 }
