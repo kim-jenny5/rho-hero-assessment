@@ -12,14 +12,32 @@
 	transition: opacity 0.4s ease;
 }
 
+.heroWrapper::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+	z-index: 1;
+}
+
 .heroWrapper.hidden {
 	opacity: 0;
 	pointer-events: none;
 }
 
 .dark {
-	/* --darken: brightness(0.55) contrast(1.05); */
-	--darken: brightness(0.5) contrast(1.1);
+	--text-color: #fff;
+}
+
+.heroWrapper.dark::after {
+	background: rgb(0 0 0 / 60%);
+}
+
+.heroWrapper.light::after {
+	background: rgb(255 255 255 / 60%);
 }
 
 .arrowBtn {
