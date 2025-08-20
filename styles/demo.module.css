@@ -1,11 +1,11 @@
-.container {
+.wrapper {
 	position: relative;
 	width: 100%;
 	height: 100vh;
 	overflow: hidden;
 }
 
-.heroSection {
+.heroWrapper {
 	position: absolute;
 	width: 100%;
 	height: 100vh;
@@ -17,7 +17,7 @@
 	transition: opacity 0.4s ease;
 }
 
-.heroSection.hidden {
+.heroWrapper.hidden {
 	opacity: 0;
 	pointer-events: none;
 }
@@ -51,7 +51,7 @@
 	right: 1rem;
 }
 
-.dotContainer {
+.dotNav {
 	position: absolute;
 	left: 50%;
 	bottom: 5%;

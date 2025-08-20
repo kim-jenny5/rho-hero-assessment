@@ -12,8 +12,34 @@ export default function Demo() {
 	const handlePrev = () => currentSection > 0 && setCurrentSection(currentSection - 1);
 	const handleNext = () => currentSection < heroCount - 1 && setCurrentSection(currentSection + 1);
 
+	const renderHero = () =>
+		heroSections.map((section, idx) => {
+			const { src, alt } = section.backgroundImage;
+			const { titlePlacement, descriptionPlacement } = section.layout;
+
+			return (
+				<div
+					key={section.id}
+					className={clsx(
+						styles.heroWrapper,
+						idx !== currentSection && styles.hidden,
+						section.theme === 'dark' ? styles.dark : styles.light
+					)}
+				>
+					<Hero
+						src={src}
+						alt={alt}
+						title={section.title}
+						description={section.description}
+						placeTitle={titlePlacement}
+						placeDescription={descriptionPlacement}
+					/>
+				</div>
+			);
+		});
+
 	return (
-		<div className={styles.container}>
+		<div className={styles.wrapper}>
 			<button
 				type='button'
 				onClick={handlePrev}
@@ -22,30 +48,7 @@ export default function Demo() {
 			>
 				<ArrowLeft size={20} />
 			</button>
-			{heroSections.map((section, idx) => {
-				const { src, alt } = section.backgroundImage;
-				const { titlePlacement, descriptionPlacement } = section.layout;
-
-				return (
-					<div
-						key={section.id}
-						className={clsx(
-							styles.heroSection,
-							idx !== currentSection && styles.hidden,
-							section.theme === 'dark' ? styles.dark : styles.light
-						)}
-					>
-						<Hero
-							src={src}
-							alt={alt}
-							title={section.title}
-							description={section.description}
-							placeTitle={titlePlacement}
-							placeDescription={descriptionPlacement}
-						/>
-					</div>
-				);
-			})}
+			{renderHero()}
 			<button
 				type='button'
 				onClick={handleNext}
@@ -54,7 +57,7 @@ export default function Demo() {
 			>
 				<ArrowRight size={20} />
 			</button>
-			<div className={styles.dotContainer}>
+			<nav className={styles.dotNav}>
 				{heroSections.map((_, idx) => (
 					<button
 						type='button'
@@ -63,7 +66,7 @@ export default function Demo() {
 						className={clsx(styles.dot, idx === currentSection && styles.active)}
 					/>
 				))}
-			</div>
+			</nav>
 		</div>
 	);
 }
