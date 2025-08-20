@@ -13,14 +13,11 @@
 	row-gap: 0.5rem;
 }
 
-/* .title {
-} */
-
-/* .description {
-	font-size: 1.2rem;
-	line-height: 1.5;
-	color: #333;
-} */
+.title {
+	font-weight: 900;
+	font-size: 3rem;
+	letter-spacing: -0.05em;
+}
 
 .startCenter {
 	grid-column: 1;
