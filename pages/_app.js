@@ -1,11 +1,13 @@
 import '../globals.css';
-import { DM_Sans } from 'next/font/google';
+import { Manrope, Inter } from 'next/font/google';
+import clsx from 'clsx';
 
-const DMSans = DM_Sans({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' });
 
 export default function App({ Component, pageProps }) {
 	return (
-		<main className={DMSans.className}>
+		<main className={clsx(inter.className, manrope.variable)}>
 			<Component {...pageProps} />
 		</main>
 	);
