@@ -14,5 +14,9 @@
 		"prop-types": "^15.8.1",
 		"react": "latest",
 		"react-dom": "latest"
+	},
+	"devDependencies": {
+		"prettier": "^3.6.2",
+		"prettier-plugin-css-order": "^2.1.2"
 	}
 }
