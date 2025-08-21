@@ -1,6 +1,3 @@
-// Mock CMS data - simulates what you'd receive from a headless CMS
-// In a real app, this would come from an API call or GraphQL query
-
 export const heroSections = [
 	{
 		id: 'hero-1',
@@ -11,10 +8,7 @@ export const heroSections = [
 			src: '/sample-image.png',
 			alt: 'Modern workspace with laptop and coffee',
 		},
-		layout: {
-			titlePlacement: 'start center',
-			descriptionPlacement: 'start center',
-		},
+		// removed layout object to test default center placement
 		theme: 'dark',
 	},
 	{
@@ -26,8 +20,9 @@ export const heroSections = [
 			src: '/sample-image.png',
 			alt: 'Creative design workspace',
 		},
+		// added different layout placements
 		layout: {
-			titlePlacement: 'center end',
+			titlePlacement: 'start start',
 			descriptionPlacement: 'center end',
 		},
 		theme: 'light',
@@ -35,8 +30,9 @@ export const heroSections = [
 	{
 		id: 'hero-3',
 		title: 'Scale Your Business',
+		// added a longer description
 		description:
-			'From startup to enterprise, our platform grows with you. Built for teams of all sizes with enterprise-grade security and reliability you can trust.',
+			'From startup to enterprise, our platform grows with you. Built for teams of all sizes with enterprise-grade security and reliability you can trust. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur fringilla, sapien vel posuere finibus, risus urna vestibulum est, at euismod tortor magna nec orci. Integer sodales nunc nec sem sollicitudin, id efficitur arcu porttitor. Suspendisse potenti. Quisque euismod, nisl a congue luctus, nisl nisl interdum risus, vel cursus ipsum urna sit amet nulla.',
 		backgroundImage: {
 			src: '/sample-image.png',
 			alt: 'Business team collaboration',

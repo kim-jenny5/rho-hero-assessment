@@ -32,7 +32,8 @@ export default function Demo() {
 	const renderHero = () =>
 		heroSections.map((section, idx) => {
 			const { src, alt } = section.backgroundImage;
-			const { titlePlacement, descriptionPlacement } = section.layout;
+			const titlePlacement = section.layout?.titlePlacement;
+			const descriptionPlacement = section.layout?.descriptionPlacement;
 
 			return (
 				<div

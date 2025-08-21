@@ -6,8 +6,8 @@ export default function Hero({
 	alt,
 	title,
 	description,
-	placeTitle,
-	placeDescription,
+	placeTitle = 'center center',
+	placeDescription = 'center center',
 }) {
 	const sameCell = placeTitle === placeDescription;
 	const [titleRow, titleCol] = placeTitle.split(' ');
