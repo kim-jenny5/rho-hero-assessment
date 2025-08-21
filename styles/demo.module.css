@@ -47,7 +47,7 @@
 	padding: 0.5rem;
 	border: none;
 	border-radius: 50%;
-	opacity: 0.5;
+	opacity: 0.25;
 	transition: opacity 0.3s ease;
 	line-height: 0;
 	display: block;
@@ -96,6 +96,12 @@
 	transition: opacity 0.3s ease;
 	appearance: none;
 	-webkit-appearance: none;
+}
+
+.arrowBtn:focus-visible,
+.dot:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 2px;
 }
 
 .dot:hover {

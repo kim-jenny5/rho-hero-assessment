@@ -12,8 +12,8 @@ export default function Hero({ src, alt, title, description, placeTitle, placeDe
 	return (
 		<>
 			<img src={src} alt={alt} className={styles.bgImg} />
-			<div className={styles.hero}>
-				<section
+			<section className={styles.hero}>
+				<div
 					className={clsx(
 						styles.content,
 						sameCell ? rowMap[titleRow] : styles.split,
@@ -38,8 +38,8 @@ export default function Hero({ src, alt, title, description, placeTitle, placeDe
 					>
 						{description}
 					</p>
-				</section>
-			</div>
+				</div>
+			</section>
 		</>
 	);
 }
