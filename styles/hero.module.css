@@ -6,24 +6,24 @@
 }
 
 .hero {
+	display: grid;
 	position: relative;
-	max-width: 1440px;
+	grid-template-rows: repeat(12, 1fr);
+	grid-template-columns: repeat(12, 1fr);
+	z-index: 2;
 	margin: 0 auto;
 	padding: 1.25rem;
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: repeat(12, 1fr);
-	height: 100%;
 	width: 100%;
-	z-index: 2;
+	max-width: 1440px;
+	height: 100%;
 }
 
 .content {
 	display: flex;
-	flex-direction: column;
 	row-gap: 1rem;
-	color: var(--text-color, #000);
+	flex-direction: column;
 	max-width: 32ch;
+	color: var(--text-color, #000);
 }
 
 .content.split {
@@ -31,20 +31,20 @@
 }
 
 .title {
-	font-family: var(--font-manrope), system-ui, sans-serif;
+	margin: 0;
+	font-weight: 700;
 	font-size: clamp(2.5rem, 7vw, 6rem);
 	line-height: 1;
-	font-weight: 700;
+	font-family: var(--font-manrope), system-ui, sans-serif;
 	letter-spacing: 1.1px;
-	margin: 0;
 }
 
 .description {
-	font-family: inherit;
 	margin: 0;
-	font-size: 1rem;
 	font-weight: 400;
+	font-size: 1rem;
 	line-height: 1.4;
+	font-family: inherit;
 }
 
 .colStart,
@@ -120,67 +120,67 @@
 	.rowEnd {
 		grid-row: 8 / 13;
 	}
+}
 
-	/* Tablet Landscape */
-	@media (width >= 1024px) {
-		.hero {
-			padding: 1.75rem;
-		}
-
-		.content {
-			row-gap: 1.75rem;
-			max-width: 56ch;
-		}
-
-		.colStart {
-			grid-column: 1 / 7;
-		}
-
-		.colCenter {
-			grid-column: 4 / 10;
-		}
-
-		.colEnd {
-			grid-column: 7 / 13;
-		}
-
-		.rowStart {
-			grid-row: 1 / 7;
-		}
-
-		.rowCenter {
-			grid-row: 4 / 10;
-		}
-
-		.rowEnd {
-			grid-row: 7 / 13;
-		}
-
-		.title {
-			letter-spacing: 1.9px;
-		}
+/* Tablet Landscape */
+@media (width >= 1024px) {
+	.hero {
+		padding: 1.75rem;
 	}
 
-	/* Desktop */
-	@media (width >= 1128px) {
-		.hero {
-			padding: 2rem;
-		}
-
-		.content {
-			row-gap: 2rem;
-			max-width: 64ch;
-		}
+	.content {
+		row-gap: 1.75rem;
+		max-width: 56ch;
 	}
 
-	/* Desktop Widescreen */
-	@media (width >= 1440px) {
-		.hero {
-			padding: 2.5rem;
-		}
+	.colStart {
+		grid-column: 1 / 7;
+	}
 
-		.content {
-			max-width: 72ch;
-		}
+	.colCenter {
+		grid-column: 4 / 10;
+	}
+
+	.colEnd {
+		grid-column: 7 / 13;
+	}
+
+	.rowStart {
+		grid-row: 1 / 7;
+	}
+
+	.rowCenter {
+		grid-row: 4 / 10;
+	}
+
+	.rowEnd {
+		grid-row: 7 / 13;
+	}
+
+	.title {
+		letter-spacing: 1.9px;
+	}
+}
+
+/* Desktop */
+@media (width >= 1128px) {
+	.hero {
+		padding: 2rem;
+	}
+
+	.content {
+		row-gap: 2rem;
+		max-width: 64ch;
+	}
+}
+
+/* Desktop Widescreen */
+@media (width >= 1440px) {
+	.hero {
+		padding: 2.5rem;
+	}
+
+	.content {
+		max-width: 72ch;
 	}
 }

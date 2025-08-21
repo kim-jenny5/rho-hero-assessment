@@ -1,13 +1,28 @@
 import styles from '../../styles/hero.module.css';
 import clsx from 'clsx';
 
-export default function Hero({ src, alt, title, description, placeTitle, placeDescription }) {
+export default function Hero({
+	src,
+	alt,
+	title,
+	description,
+	placeTitle,
+	placeDescription,
+}) {
 	const sameCell = placeTitle === placeDescription;
 	const [titleRow, titleCol] = placeTitle.split(' ');
 	const [descRow, descCol] = placeDescription.split(' ');
 
-	const rowMap = { start: styles.rowStart, center: styles.rowCenter, end: styles.rowEnd };
-	const colMap = { start: styles.colStart, center: styles.colCenter, end: styles.colEnd };
+	const rowMap = {
+		start: styles.rowStart,
+		center: styles.rowCenter,
+		end: styles.rowEnd,
+	};
+	const colMap = {
+		start: styles.colStart,
+		center: styles.colCenter,
+		end: styles.colEnd,
+	};
 
 	return (
 		<>

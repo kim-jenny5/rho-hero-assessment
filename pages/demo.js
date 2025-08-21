@@ -9,8 +9,10 @@ export default function Demo() {
 	const [currentSection, setCurrentSection] = useState(0);
 	const heroCount = heroSections.length;
 
-	const handlePrev = () => currentSection > 0 && setCurrentSection((prev) => prev - 1);
-	const handleNext = () => currentSection < heroCount - 1 && setCurrentSection((prev) => prev + 1);
+	const handlePrev = () =>
+		currentSection > 0 && setCurrentSection((prev) => prev - 1);
+	const handleNext = () =>
+		currentSection < heroCount - 1 && setCurrentSection((prev) => prev + 1);
 
 	useEffect(() => {
 		const handleKeyDown = (e) => {
@@ -82,7 +84,10 @@ export default function Demo() {
 						type='button'
 						key={idx}
 						onClick={() => setCurrentSection(idx)}
-						className={clsx(styles.dot, idx === currentSection && styles.active)}
+						className={clsx(
+							styles.dot,
+							idx === currentSection && styles.active
+						)}
 						aria-label={`Go to hero ${idx + 1}`}
 						aria-current={idx === currentSection && 'page'}
 					/>
